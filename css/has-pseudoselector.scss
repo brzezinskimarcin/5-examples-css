@@ -22,6 +22,10 @@
       overflow: hidden;
       width: 20%;
       transition: all 0.4s ease-in-out;
+
+      &:hover {
+        scale: var(--scale-big);
+      }
     }
 
     &__title {
@@ -40,5 +44,20 @@
       left: 50%;
       transform: translateX(-50%);
     }
+  }
+
+  .staircase__card:hover + .staircase__card,
+  .staircase__card:has(+ .staircase__card:hover) {
+    scale: var(--scale-medium);
+    opacity: var(--opacity-medium);
+  }
+
+  .staircase__cards:has(.staircase__card:hover) .staircase__card:not(
+    :hover,
+    .staircase__card:hover + .staircase__card,
+    .staircase__card:has(+ .staircase__card:hover)
+  ) {
+    scale: var(--scale-small);
+    opacity: var(--opacity-small);
   }
 }

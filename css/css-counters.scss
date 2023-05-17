@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     gap: 1.25rem;
+    counter-reset: stepper;
 
     hr {
       width: 5rem;
@@ -27,6 +28,24 @@
       font-weight: 400;
       color: var(--text-color);
       margin-top: 1.75rem;
+
+      &::before {
+        counter-increment: stepper;
+        content: counter(stepper);
+        display: grid;
+        place-content: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        margin-bottom: 0.75rem;
+        font-size: 1.5rem;
+        color: var(--number-color);
+        background: linear-gradient(
+          to bottom right,
+          var(--bg-color-1),
+          var(--bg-color-2)
+        );
+      }
 
       &--completed {
         --bg-color-1: #a3e635;
@@ -58,24 +77,6 @@
           filter: blur(3.5rem);
         }
       }
-    }
-
-    
-
-    &__icon {
-      display: grid;
-      place-content: center;
-      width: 4rem;
-      height: 4rem;
-      border-radius: 50%;
-      margin-bottom: 0.75rem;
-      font-size: 1.5rem;
-      color: var(--number-color);
-      background: linear-gradient(
-        to bottom right,
-        var(--bg-color-1),
-        var(--bg-color-2)
-      );
     }
   }
 }

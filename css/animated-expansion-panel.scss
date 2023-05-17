@@ -24,7 +24,9 @@
     }
 
     &__wrapper {
-      height: 0;
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.8s ease-in-out;
     }
 
     &__content {
@@ -84,6 +86,8 @@
     display: none;
 
     &:checked + .expansion-panel__wrapper {
+      grid-template-rows: 1fr;
+
       .expansion-panel {
         &__thumbnail {
           opacity: 1;
