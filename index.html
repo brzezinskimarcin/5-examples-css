@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/css-counters.css">
     <title>5 examples showcasing new CSS features</title>
   </head>
   <body>
@@ -17,15 +18,47 @@
         <h2 class="section__header">CSS Counters</h2>
 
         <main class="section__content" id="css-counters">
-          Content
+          <main class="section__content" id="css-counters">
+            <ol class="stepper">
+              <li class="stepper__item stepper__item--completed">
+                <div class="stepper__icon"></div>
+                Truck selection
+              </li>
+              <hr>
+              <li class="stepper__item stepper__item--completed">
+                <div class="stepper__icon"></div>
+                Department
+              </li>
+              <hr>
+              <li class="stepper__item stepper__item--selected">
+                <div class="stepper__icon"></div>
+                Payment
+              </li>
+              <hr>
+              <li class="stepper__item">
+                <div class="stepper__icon"></div>
+                Confirmation
+              </li>
+            </ol>
+          </main>
         </main>
 
         <footer class="section__footer">
           More on that:
           <ul>
             <li>
-              <a href="https://gooogle.com/">
-                Google
+              <a href="https://caniuse.com/css-counters" target="_blank">
+                Browser support
+              </a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters" target="_blank">
+                Using CSS counters
+              </a>
+            </li>
+            <li>
+              <a href="https://una.im/css-games/" target="_blank">
+                Pure CSS Games with counter-increment
               </a>
             </li>
           </ul>

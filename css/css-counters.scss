@@ -1,0 +1,81 @@
+#css-counters {
+  display: grid;
+  place-content: center;
+
+  .stepper {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    hr {
+      width: 5rem;
+      border-color: var(--zinc-800);
+      border-style: dashed;
+    }
+
+    &__item {
+      --bg-color-1: var(--zinc-600);
+      --bg-color-2: var(--zinc-800);
+      --text-color: var(--zinc-400);
+      --number-color: var(--zinc-400);
+      opacity: 0.4;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 400;
+      color: var(--text-color);
+      margin-top: 1.75rem;
+
+      &--completed {
+        --bg-color-1: #a3e635;
+        --bg-color-2: #22c55e;
+        --text-color: #22c55e;
+        --number-color: var(--zinc-900);
+        opacity: 0.8;
+      }
+
+      &--selected {
+        --bg-color-1: var(--step-1);
+        --bg-color-2: var(--step-2);
+        --text-color: var(--zinc-50);
+        --number-color: var(--zinc-900);
+        opacity: 1;
+        font-weight: 700;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          background: linear-gradient(
+            to bottom right,
+            var(--step-1),
+            var(--step-2)
+          );
+          filter: blur(3.5rem);
+        }
+      }
+    }
+
+    
+
+    &__icon {
+      display: grid;
+      place-content: center;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      color: var(--number-color);
+      background: linear-gradient(
+        to bottom right,
+        var(--bg-color-1),
+        var(--bg-color-2)
+      );
+    }
+  }
+}
